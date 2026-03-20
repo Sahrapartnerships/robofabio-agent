@@ -125,9 +125,11 @@
 - ALWAYS test links/services/URLs myself BEFORE sending to user
 - Verify HTTP status codes (should be 200)
 - Check that the service actually works end-to-end
+- **NEW: Test EVERYTHING - not just links, but code, files, configs, commands**
 - No exceptions to this rule
 
 **Action:** Self-check before every external link/resource: "Did I test this?"
+**System:** TEST_BEFORE_SEND.md + link-checker.sh implemented 2026-03-20
 
 ---
 
