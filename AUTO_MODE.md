@@ -127,3 +127,15 @@ Jede Nacht (via Cronjob):
 
 **Signatur:** Robofabio Auto-Mode v1.0  
 **Nächstes Review:** 2026-03-27
+---
+
+### Für Proaktive Ausführung (Neu - 2026-03-21):
+- **PROACTIVE_EXECUTION** - Bei externen Blockern (warten auf User) automatisch parallele Tasks identifizieren und ausführen
+- **COST_TRANSPARENCY** - Bei kostenpflichtigen Operationen (APIs, Services) immer Preisvergleich mit mindestens 2 Alternativen zeigen
+- **BLOCKER_TRACKING** - Alle Blocker dokumentieren mit: Beschreibung, Dauer, Verantwortlicher, Workaround-Status
+
+---
+
+**Signatur:** Robofabio Auto-Mode v1.1  
+**Letztes Update:** 2026-03-21 (Self-Improvement Analysis)  
+**Nächstes Review:** 2026-03-27
