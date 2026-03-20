@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "skills": {
+    "klaviyo": {
+      "version": "1.0.4",
+      "installedAt": 1773919441750
+    },
+    "playwright": {
+      "version": "1.0.3",
+      "installedAt": 1773920224263
+    },
+    "video-transcript-downloader": {
+      "version": "1.0.0",
+      "installedAt": 1773920401873
+    },
+    "git": {
+      "version": "1.0.8",
+      "installedAt": 1773920401885
+    },
+    "skill-finder": {
+      "version": "1.1.5",
+      "installedAt": 1773920402042
+    },
+    "web-search-plus": {
+      "version": "2.9.0",
+      "installedAt": 1773920402265
+    },
+    "peekaboo": {
+      "version": "1.0.0",
+      "installedAt": 1773920521172
+    }
+  }
+}

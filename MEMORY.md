@@ -21,7 +21,9 @@
 **Status:** 95% complete - TikTok System built
 
 **Abgeschlossen:**
-- ✅ 50+ Seiten PDF (professionell mit LaTeX)
+- ✅ **PDF Ratgeber FERTIG** - 7 Seiten, professionell formatiert
+  - Path: `/root/life/elternratgeber-system/pdf/Elternratgeber_Schulstress_befreit.pdf`
+  - Content: 3 Fehler + Lösungen + 7-Tage-Praxisplan
 - ✅ Landing Page live: https://elternratgeber-deploy.vercel.app
 - ✅ 20 TikTok Carousels (Content ready)
 - ✅ Legal docs (Datenschutz, Impressum, AGB)
@@ -37,12 +39,26 @@
   - Style: Flat vector illustration, warme Pastellfarben
   - Format: 1080x1350px für TikTok/Instagram
   - Text-Overlays via Python PIL (deutsche Texte)
+- ✅ **Stripe Integration Research** - Payment Links + Zapier = beste Lösung
+- ✅ **TikTok API Research** - Upload-Post API ($16/Monat) = sofort verfügbar
+
+**Image Generation v6 - Model Comparison (2026-03-20):**
+- ✅ **Ideogram V3 vs FLUX-Pro Vergleich** durchgeführt
+  - Research: Best prompting practices für beide Modelle
+  - Same theme (gestresstes Kind), optimierte Prompts pro Modell
+  - Ideogram V3: Editorial flat design, 554.7 KB, $0.04
+  - FLUX-Pro: 3D Pixar cinematic, 115.8 KB, $0.03-0.05
+  - GitHub Commit: `bd9e44a`
+  - Links: 
+    - Ideogram: https://raw.githubusercontent.com/Sahrapartnerships/tiktok-carousel-images/master/model_comparison/01_ideogram_v3.png
+    - FLUX-Pro: https://raw.githubusercontent.com/Sahrapartnerships/tiktok-carousel-images/master/model_comparison/02_flux_pro.png
+- ⏳ **Warte auf Master Albert's Entscheidung** für finalen Stil
 
 **Offen:**
-- ⏳ Zahlungsanbindung (Stripe/PayPal)
-- ⏳ TikTok API Integration (Upload) oder manuelles Posten
-- ⏳ Dashboard Start & Stripe Webhook Setup
-- ⏳ Restliche 15 Karussells (75 Bilder) generieren
+- ⏳ **Bild-Stil Entscheidung** - Ideogram V3 vs FLUX-Pro für 15 weitere Karussells (75 Bilder)
+- ⏳ Zahlungsanbindung (Stripe/PayPal) - Integration vorbereitet, wartet auf Account
+- ⏳ TikTok Upload - API-Integration (Upload-Post $16/Monat) oder manuelles Posten
+- ⏳ Dashboard Deployment - Streamlit App bereit
 
 ### Crypto Trading Setup (NEW)
 **Status:** Tools installed, research complete
@@ -86,7 +102,48 @@
 
 ---
 
-*Last updated: 2026-03-18 (TikTok Images generated with fal.ai)*
+## 🧠 Critical Learnings & Rules
+
+### Rule #1: ALWAYS Test Before Sending
+**Date:** 2026-03-20
+**Context:** Zrok tunnel setup
+**User Feedback:** *"hast du den link getsted? wir hatten ausgeacht du testes immer alles vorher bevor du mir es sendest merk dir das bitte"*
+
+**What happened:**
+- Generated Zrok link without testing first
+- User opened it and saw issues
+- Had to iterate multiple times
+
+**Lesson learned:**
+- ALWAYS test links/services/URLs myself BEFORE sending to user
+- Verify HTTP status codes (should be 200)
+- Check that the service actually works end-to-end
+- No exceptions to this rule
+
+**Action:** Self-check before every external link/resource: "Did I test this?"
+
+---
+
+### Rule #2: ALWAYS Send Complete URLs
+**Date:** 2026-03-20
+**Context:** Link sharing
+**User Feedback:** *"mir immer alle links so senden das ich sie öffnen kann"*
+
+**What happened:**
+- User couldn't click/open partial/truncated links
+- Had to ask for complete URLs
+
+**Lesson learned:**
+- ALWAYS send FULL, clickable URLs
+- Never truncate links with "..." or line breaks
+- Use complete format: `https://example.com/full/path`
+- Test that links are clickable before sending
+
+**Action:** Verify every link is complete and clickable.
+
+---
+
+*Last updated: 2026-03-20 (PDF Complete + URL Rule)
 
 ## 🔐 Credentials & API Tokens
 
