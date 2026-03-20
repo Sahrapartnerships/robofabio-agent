@@ -48,6 +48,10 @@
   - Text-Overlays via Python PIL (deutsche Texte)
 - ✅ **Stripe Integration Research** - Payment Links + Zapier = beste Lösung
 - ✅ **TikTok API Research** - Upload-Post API ($16/Monat) = sofort verfügbar
+- ✅ **Dashboard DEPLOYED** - GitHub Pages live (2026-03-21)
+  - URL: https://sahrapartnerships.github.io/robofabio-agent/
+  - Features: Content Progress, System Status, Blockers, Metrics
+  - Auto-refresh: 5 Minuten, mobile responsive
 
 **Image Generation v6 - Model Comparison (2026-03-20):**
 - ✅ **Ideogram V3 vs FLUX-Pro Vergleich** durchgeführt
@@ -65,7 +69,6 @@
 - ⏳ **Bild-Stil Entscheidung** - Ideogram V3 vs FLUX-Pro für 15 weitere Karussells (75 Bilder)
 - ⏳ Zahlungsanbindung (Stripe/PayPal) - Integration vorbereitet, wartet auf Account
 - ⏳ TikTok Upload - API-Integration (Upload-Post $16/Monat) oder manuelles Posten
-- ⏳ Dashboard Deployment - Streamlit App bereit
 
 ### Crypto Trading Setup (NEW)
 **Status:** Tools installed, research complete
