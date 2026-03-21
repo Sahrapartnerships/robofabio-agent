@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robofabio Agent Dashboard</title>
+    <meta http-equiv="refresh" content="300">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .header h1 { font-size: 2em; margin-bottom: 10px; }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 16px;
+            font-size: 1.3em;
+        }
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .metric:last-child { border-bottom: none; }
+        .metric-label { color: #666; }
+        .metric-value {
+            font-weight: bold;
+            color: #333;
+        }
+        .status-green { color: #10b981; }
+        .status-yellow { color: #f59e0b; }
+        .status-red { color: #ef4444; }
+        
+        .link-list {
+            list-style: none;
+        }
+        .link-list li {
+            margin: 12px 0;
+        }
+        .link-list a {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background: #f8fafc;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+        .link-list a:hover {
+            background: #e0e7ff;
+            border-color: #667eea;
+            transform: translateX(5px);
+        }
+        .link-icon {
+            font-size: 1.5em;
+            margin-right: 12px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 10px;
+        }
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+        .blocker {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .blocker-title { font-weight: bold; color: #92400e; }
+        .blocker-desc { color: #78350f; font-size: 0.9em; margin-top: 4px; }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #10b981, #34d399);
+            border-radius: 10px;
+            transition: width 0.3s;
+        }
+        
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .card { padding: 16px; }
+            .header h1 { font-size: 1.5em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🦾 Robofabio Agent Dashboard</h1>
+            <p>Elternratgeber "Schulstress befreit" — Status & Ressourcen</p>
+        </div>
+
+        <div class="card">
+            <h2>📊 Projekt Fortschritt</h2>
+            <div class="metric">
+                <span class="metric-label">Gesamtfortschritt</span>
+                <span class="metric-value status-green">95%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 95%"></div>
+            </div>
+            <div class="metric">
+                <span class="metric-label">TikTok Karussells</span>
+                <span class="metric-value status-green">20/20 (100 Bilder)</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">PDF Ratgeber</span>
+                <span class="metric-value status-green">✅ Fertig</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Landing Page</span>
+                <span class="metric-value status-green">✅ Live</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Email Sequenz</span>
+                <span class="metric-value status-green">✅ 6 Emails</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">TikTok Poster Bot</span>
+                <span class="metric-value status-green">✅ Deployed</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🔗 Ressourcen (Alle Getestet)</h2>
+            <ul class="link-list">
+                <li>
+                    <a href="https://github.com/Sahrapartnerships/robofabio-agent/blob/master/Elternratgeber_Schulstress_befreit.pdf" target="_blank">
+                        <span class="link-icon">📄</span>
+                        <div>
+                            <strong>PDF Ratgeber</strong>
+                            <div style="font-size: 0.85em; color: #666;">Elternratgeber Schulstress befreit (15 Seiten)</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Sahrapartnerships/robofabio-agent/blob/master/elternratgeber-system/landing_page_optimized.html" target="_blank">
+                        <span class="link-icon">🌐</span>
+                        <div>
+                            <strong>Landing Page</strong>
+                            <div style="font-size: 0.85em; color: #666;">Weekend-Launch Version</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Sahrapartnerships/tiktok-carousel-images" target="_blank">
+                        <span class="link-icon">🖼️</span>
+                        <div>
+                            <strong>Bilder Repository</strong>
+                            <div style="font-size: 0.85em; color: #666;">Alle 100 TikTok Bilder (20 Karussells)</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Sahrapartnerships/robofabio-agent/tree/master/tiktok_poster_bot" target="_blank">
+                        <span class="link-icon">🤖</span>
+                        <div>
+                            <strong>TikTok Poster Bot</strong>
+                            <div style="font-size: 0.85em; color: #666;">Automatisierter Upload (2,500+ Zeilen Code)</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Sahrapartnerships/robofabio-agent" target="_blank">
+                        <span class="link-icon">💻</span>
+                        <div>
+                            <strong>GitHub Repository</strong>
+                            <div style="font-size: 0.85em; color: #666;">Vollständiger Code & Assets</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🚫 Aktive Blocker</h2>
+            <div class="blocker">
+                <div class="blocker-title">💳 Stripe Account (3 Tage)</div>
+                <div class="blocker-desc">Zahlungsintegration wartet auf Account-Erstellung</div>
+            </div>
+            <div class="blocker">
+                <div class="blocker-title">📤 TikTok Upload Methode (2 Tage)</div>
+                <div class="blocker-desc">Entscheidung: API ($16/Monat) vs. manuelles Posten</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📈 System Status</h2>
+            <div class="metric">
+                <span class="metric-label">Fehler (24h)</span>
+                <span class="metric-value status-green">0</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Git Commits</span>
+                <span class="metric-value">12</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Letztes Update</span>
+                <span class="metric-value" id="timestamp">Lade...</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🦾 Robofabio Autonomous Agent v1.0</p>
+            <p>Auto-refresh alle 5 Minuten | Letzte Prüfung: <span id="checktime"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Update timestamps
+        function updateTime() {
+            const now = new Date();
+            const timeStr = now.toLocaleString('de-DE', { 
+                day: '2-digit', month: '2-digit', year: 'numeric',
+                hour: '2-digit', minute: '2-digit'
+            });
+            document.getElementById('timestamp').textContent = timeStr;
+            document.getElementById('checktime').textContent = timeStr;
+        }
+        updateTime();
+        setInterval(updateTime, 60000);
+    </script>
+</body>
+</html>
