@@ -12,6 +12,8 @@
 - **ALWAYS_TEST_BEFORE_SEND** — Links, Code, Dateien, Configs MÜSSEN vor dem Senden verifiziert werden. Keine Ausnahmen.
 - **COMPLETE_URLS_ONLY** — Immer vollständige, klickbare URLs. Nie kürzen oder umbrechen.
 - **ALWAYS_READ_DOCS_FIRST** — Dokumentation lesen BEVOR Code schreiben, APIs testen, oder Lösungen vorschlagen. Keine Ausnahmen. Verifiziere: Auth-Methoden, Endpoints, Parameter, Limits.
+- **LINKS_MUST_RETURN_200** — Jeder HTTP-Link muss vor dem Senden auf 200 OK getestet werden. Bei 404/Error: Kein Senden. Direktbilder (MEDIA:) bevorzugen.
+- **NO_GUESSING_PATHS** — Nie Pfade oder URLs "erraten". Existenz verifizieren vor dem Senden. Bei Unsicherheit: Direkt statt Link senden.
 
 ### Für Deployment & Execution:
 - **DEPLOY_WHEN_READY** — "Fertig" bedeutet deployed/live/produktiv, nicht nur lokal funktionsfähig. Deployment ist Teil der Aufgabe.

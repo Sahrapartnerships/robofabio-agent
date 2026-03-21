@@ -27,6 +27,14 @@
 
 ## 📝 ERROR LOG
 
+### #2: Tote Links geschickt (404)
+**Zeit:** 2026-03-21 22:15  
+**Regel-Verstoß:** LINKS_MUST_RETURN_200, ALWAYS_TEST_BEFORE_SEND  
+**Beschreibung:** GitHub-Links zu Bildern geschickt die nicht existieren (404). Pfade waren falsch/erraten.  
+**Ursache:** "ALWAYS_TEST_BEFORE_SEND" nicht befolgt, Pfade nicht verifiziert  
+**Fix:** Neue Regel "LINKS_MUST_RETURN_200" + "NO_GUESSING_PATHS" in AUTO_MODE.md. Jeder Link muss HTTP 200 zurückgeben vor dem Senden.  
+**Verhindert durch:** Regel #10 & #11 (seit 22:20 aktiv)
+
 ### #1: API ohne Doku getestet
 **Zeit:** 2026-03-21 21:45  
 **Regel-Verstoß:** ALWAYS_READ_DOCS_FIRST  
