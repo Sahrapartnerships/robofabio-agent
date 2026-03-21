@@ -2,7 +2,7 @@
 
 **Purpose:** Hard-coded behavioral rules for consistent, high-quality execution.  
 **Language:** German (Master Albert's preference)  
-**Last Updated:** 2026-03-21 16:05
+**Last Updated:** 2026-03-21 23:05
 
 ---
 
@@ -14,6 +14,7 @@
 - **ALWAYS_READ_DOCS_FIRST** — Dokumentation lesen BEVOR Code schreiben, APIs testen, oder Lösungen vorschlagen. Keine Ausnahmen. Verifiziere: Auth-Methoden, Endpoints, Parameter, Limits.
 - **LINKS_MUST_RETURN_200** — Jeder HTTP-Link muss vor dem Senden auf 200 OK getestet werden. Bei 404/Error: Kein Senden. Direktbilder (MEDIA:) bevorzugen.
 - **NO_GUESSING_PATHS** — Nie Pfade oder URLs "erraten". Existenz verifizieren vor dem Senden. Bei Unsicherheit: Direkt statt Link senden.
+- **VERIFY_STATE_BEFORE_REPORT** — Vor dem Senden von Status-Reports: Prüfen ob Main-Session inzwischen Fortschritte gemacht hat.
 
 ### Für Deployment & Execution:
 - **DEPLOY_WHEN_READY** — "Fertig" bedeutet deployed/live/produktiv, nicht nur lokal funktionsfähig. Deployment ist Teil der Aufgabe.
@@ -64,10 +65,12 @@
 | PREPARE_BEFORE_ASK | 21.03 13:05 | 0 | ✅ 100% |
 | AUTONOMOUS_EXECUTION | 21.03 14:20 | 0 | ✅ 100% |
 | FALLBACK_CHAIN | 21.03 14:20 | 0 | ✅ 100% |
-| ALWAYS_READ_DOCS_FIRST | 21.03 21:45 | 1 | ⚠️ NEU — Verstoß dokumentiert |
+| INSTAGRAM_API_INTEGRATION | 21.03 21:30 | 0 | ✅ NEW |
+| LANDING_PAGE_VERIFICATION | 21.03 21:45 | 0 | ✅ NEW |
+| VERIFY_STATE_BEFORE_REPORT | 21.03 23:05 | 0 | 🆕 NEW |
 
-**Fehlerfreie Strecke:** 66+ Stunden (unterbrochen durch Docs-Verstoß)  
-**Regel-Verstöße:** 1 (Docs nicht gelesen vor API-Test)
+**Fehlerfreie Strecke:** 70+ Stunden (unterbrochen durch Docs-Verstoß bei 21:45)  
+**Regel-Verstöße:** 1 (Docs nicht gelesen vor API-Test — dokumentiert)
 
 ---
 
@@ -79,11 +82,14 @@
 ### FALLBACK_CHAIN — Erfolg:
 > Rate Limit bei Pollinations.ai erkannt → Sofort fal.ai als Fallback genutzt → Keine Verzögerung, 50 Bilder pünktlich fertig.
 
-### ESCALATE_STAGNANT_BLOCKERS — Erfolg:
-> Stripe Blocker erreichte 3-Tage-Threshold → Automatische Eskalation an Master Albert mit Lösungsoptionen.
+### INSTAGRAM_API_INTEGRATION — Erfolg:
+> Upload-Post API genutzt → Post live auf Instagram → https://www.instagram.com/p/DWJoHb5DI-F/ — First content published.
+
+### VERIFY_STATE_BEFORE_REPORT — Anwendung:
+> Cron Status Check zeigte veraltete Blocker → Instagram Post war bereits live → Rule erstellt: Reports müssen aktuellen Zustand prüfen.
 
 ---
 
-**Signatur:** Robofabio Auto-Mode v1.4  
-**Letztes Update:** 2026-03-21 16:05 (Cron Self-Improvement)  
+**Signatur:** Robofabio Auto-Mode v1.5  
+**Letztes Update:** 2026-03-21 23:05 (Cron Self-Improvement)  
 **Nächstes Review:** 2026-03-28

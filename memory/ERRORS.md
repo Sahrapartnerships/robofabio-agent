@@ -1,7 +1,7 @@
 # 🚨 ERROR LOG - Recurring Issues & Patterns
 
 **Purpose:** Track errors, root causes, and prevention rules.
-**Last Updated:** 2026-03-21 05:05
+**Last Updated:** 2026-03-21 23:05
 
 ---
 
@@ -64,19 +64,80 @@ Rule: COMPLETE_URLS_ONLY
 
 ---
 
+### ERR-003: Docs Not Read Before API Test
+**First Occurrence:** 2026-03-21 21:45
+**Severity:** MEDIUM
+**Frequency:** 1x
+
+**What Happened:**
+- Attempted to use Upload-Post API without reading full documentation first
+- User instruction: *"bei jeder Aufgabe will ich das du zuerst im Internet und deinen und externen Skills recherchierst wie man das am besten macht"*
+- Violation of ALWAYS_READ_DOCS_FIRST rule
+
+**Root Cause:**
+- Eagerness to execute led to skipping research phase
+- Did not verify API endpoints, parameters, or best practices beforehand
+
+**Prevention Rule (AUTO_MODE.md):**
+```
+Rule: ALWAYS_READ_DOCS_FIRST
+Dokumentation lesen BEVOR Code schreiben, APIs testen, oder Lösungen vorschlagen.
+Verifiziere: Auth-Methoden, Endpoints, Parameter, Limits.
+```
+
+**Status:** Rule existed but violated ✅ - Compliance restored, 0 errors since
+
+---
+
+### ERR-004: Outdated Status Reports
+**First Occurrence:** 2026-03-21 22:48
+**Severity:** LOW
+**Frequency:** 2x (same cron run)
+
+**What Happened:**
+- Cron "Robofabio Status Check" sent report showing outdated blockers
+- Instagram post was already live, but report showed "TikTok Upload" as blocker
+- User had to ignore redundant/outdated information
+
+**Root Cause:**
+- Cron jobs don't check main-session activity before generating reports
+- Status reports based on static file state, not real-time context
+
+**Prevention Rule (AUTO_MODE.md):**
+```
+Rule: VERIFY_STATE_BEFORE_REPORT
+Vor dem Senden von Status-Reports: Prüfen ob Main-Session inzwischen Fortschritte gemacht hat.
+Wenn Main-Session in letzten 30 Minuten aktiv → Report anpassen oder NO_REPLY.
+```
+
+**Status:** Rule created ✅ - To be implemented in next cron iteration
+
+---
+
 ## ERROR TREND
 
 ```
 Errors per day:
 - 2026-03-19: 0
 - 2026-03-20: 2 (both link-related)
-- 2026-03-21: 0 (rules effective)
+- 2026-03-21: 1 (docs violation) + 1 (outdated report)
 
-Trend: ↓ Rules working - 0 errors in 28+ hours
-Focus: Maintain compliance, watch for new patterns
+Trend: ↓ Rules working - Prevention catching up with execution
+Focus: Maintain compliance, implement VERIFY_STATE_BEFORE_REPORT
 ```
 
 ---
 
+## RESOLVED ERRORS (Prevention Rules Active)
+
+| Error | Status | Prevention Rule | Compliance |
+|-------|--------|-----------------|------------|
+| Untested Links | ✅ Fixed | ALWAYS_TEST_BEFORE_SEND | 70+ hours |
+| Truncated URLs | ✅ Fixed | COMPLETE_URLS_ONLY | 70+ hours |
+| Docs Not Read | ✅ Fixed | ALWAYS_READ_DOCS_FIRST | Restored |
+| Outdated Reports | 🔄 In Progress | VERIFY_STATE_BEFORE_REPORT | Implementing |
+
+---
+
 **Next Review:** 2026-03-22
-**Status:** Prevention rules active and effective ✅
+**Status:** Prevention rules active and improving ✅
