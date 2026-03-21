@@ -11,6 +11,7 @@
 ### Für Qualität & Vertrauen:
 - **ALWAYS_TEST_BEFORE_SEND** — Links, Code, Dateien, Configs MÜSSEN vor dem Senden verifiziert werden. Keine Ausnahmen.
 - **COMPLETE_URLS_ONLY** — Immer vollständige, klickbare URLs. Nie kürzen oder umbrechen.
+- **ALWAYS_READ_DOCS_FIRST** — Dokumentation lesen BEVOR Code schreiben, APIs testen, oder Lösungen vorschlagen. Keine Ausnahmen. Verifiziere: Auth-Methoden, Endpoints, Parameter, Limits.
 
 ### Für Deployment & Execution:
 - **DEPLOY_WHEN_READY** — "Fertig" bedeutet deployed/live/produktiv, nicht nur lokal funktionsfähig. Deployment ist Teil der Aufgabe.
@@ -61,9 +62,10 @@
 | PREPARE_BEFORE_ASK | 21.03 13:05 | 0 | ✅ 100% |
 | AUTONOMOUS_EXECUTION | 21.03 14:20 | 0 | ✅ 100% |
 | FALLBACK_CHAIN | 21.03 14:20 | 0 | ✅ 100% |
+| ALWAYS_READ_DOCS_FIRST | 21.03 21:45 | 1 | ⚠️ NEU — Verstoß dokumentiert |
 
-**Fehlerfreie Strecke:** 66+ Stunden  
-**Regel-Verstöße:** 0
+**Fehlerfreie Strecke:** 66+ Stunden (unterbrochen durch Docs-Verstoß)  
+**Regel-Verstöße:** 1 (Docs nicht gelesen vor API-Test)
 
 ---
 

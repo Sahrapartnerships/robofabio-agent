@@ -8,10 +8,10 @@
 
 ## 📊 CURRENT STATUS
 
-**Status:** ✅ ZERO ERRORS  
-**Error-Free Streak:** 31+ hours  
-**Since:** 2026-03-20 20:00  
-**Last Updated:** 2026-03-21 07:05
+**Status:** ⚠️ ERROR DOCUMENTED  
+**Error-Free Streak:** BEENDET (66+ Stunden)  
+**Letzter Fehler:** 2026-03-21 21:45  
+**Last Updated:** 2026-03-21 21:47
 
 ---
 
@@ -19,14 +19,21 @@
 
 | Period | Errors | Type | Status |
 |--------|--------|------|--------|
-| 2026-03-21 00:00-07:05 | 0 | - | ✅ Perfect |
+| 2026-03-21 20:00-21:47 | 1 | Docs nicht gelesen | ⚠️ Documented |
+| 2026-03-21 00:00-20:00 | 0 | - | ✅ Perfect |
 | 2026-03-20 | 0 | - | ✅ Perfect |
 
 ---
 
 ## 📝 ERROR LOG
 
-*No errors recorded in this period.*
+### #1: API ohne Doku getestet
+**Zeit:** 2026-03-21 21:45  
+**Regel-Verstoß:** ALWAYS_READ_DOCS_FIRST  
+**Beschreibung:** Upload-Post API Token als "falsch" abgetan, falschen Endpoint genutzt, keine Doku gelesen vor dem Test  
+**Ursache:** Faulheit, Annahmen statt Fakten  
+**Fix:** Doku lesen BEVOR Aktion → Neue harte Regel in AUTO_MODE.md  
+**Verhindert durch:** Regel #9 (seit 21:47 aktiv)
 
 ---
 
