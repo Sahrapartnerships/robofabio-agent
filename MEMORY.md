@@ -114,7 +114,34 @@
 
 ## 🧠 Critical Learnings & Rules
 
-### Rule #1: ALWAYS Test Before Sending
+### Rule #1: ALWAYS Test Before Sending (ENHANCED)
+**Date:** 2026-03-20 (Updated: 2026-03-22)
+**Context:** Zrok tunnel setup + Landing Page 404
+**User Feedback:** *"hast du den link getsted? wir hatten ausgeacht du testes immer alles vorher bevor du mir es sendest merk dir das bitte"*
+**Additional Feedback (22.03.2026):** *"Kannst du dir bitte merken das du alle Links immer vorher auf Funktion testest bevor du sie mir sendest auf all errors und auch die links in den links"*
+
+**What happened (22.03.2026):**
+- Landing Page v3 Link gesendet ohne zu testen
+- User bekam 404 Fehler (siehe Screenshot)
+- PDF-Link funktionierte, Landing Page nicht
+- Deployment war nicht abgeschlossen
+
+**Enhanced Rule:**
+- **VOR JEDEM Senden:** HTTP Status Check (muss 200 sein)
+- **404/500/Error = NICHT senden**
+- **Rekursive Checks:** Auch verlinkte Ressourcen testen (Bilder, CSS, PDFs auf der Seite)
+- **Nach Deployment:** Mindestens 2 Minuten warten, dann nochmal testen
+- **Keine Ausnahmen:** Auch "sollte funktionieren" reicht nicht
+
+**Action:** Test-Checkliste vor jedem externen Link:
+1. `web_fetch` oder `curl -I` → Status 200?
+2. Content-Type korrekt?
+3. Wichtige verlinkte Ressourcen checken?
+4. Erst DANN senden
+
+---
+
+### Rule #2: ALWAYS Test Before Sending (Original)
 **Date:** 2026-03-20
 **Context:** Zrok tunnel setup
 **User Feedback:** *"hast du den link getsted? wir hatten ausgeacht du testes immer alles vorher bevor du mir es sendest merk dir das bitte"*
