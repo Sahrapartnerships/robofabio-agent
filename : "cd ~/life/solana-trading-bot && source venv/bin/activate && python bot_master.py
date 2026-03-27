@@ -1,0 +1,1 @@
+: "cd ~/life/solana-trading-bot && source venv/bin/activate && python bot_master.py
