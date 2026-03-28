@@ -28,6 +28,22 @@
     "peekaboo": {
       "version": "1.0.0",
       "installedAt": 1773920521172
+    },
+    "error-handling": {
+      "version": "1.0.0",
+      "installedAt": 1774645741810
+    },
+    "self-health-monitor": {
+      "version": "1.0.0",
+      "installedAt": 1774645801785
+    },
+    "autoheal": {
+      "version": "1.0.0",
+      "installedAt": 1774645802301
+    },
+    "superpowers": {
+      "version": "1.0.0",
+      "installedAt": 1774646161499
     }
   }
 }
